@@ -1,0 +1,62 @@
+@import "reset.css";
+
+:root {
+  --darkColor: #515151;
+  --lightColor: #fff;
+  --lightBlueColor: #3498db;
+  --darkBlueColor: #2980b9;
+  --lighGreenColor: #1abc9c;
+  --darkGreenColor: #16a085;
+  --lightGrayColor: #ccc;
+  --taskManagerColor: #dff9fb;
+  --lighRedColor: #e74c3c;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: url("../images/Plain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* Header start */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.logo {
+  padding: 1rem 5rem;
+  color: var(--lighGreenColor);
+}
+.account {
+  margin: 2rem;
+}
+.account span {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.account a {
+  border-radius: 15px;
+  background-color: var(--lightColor);
+  color: var(--lightBlueColor);
+  padding: 1.5rem 2rem;
+  outline: none;
+}
+.fa-house-user {
+  font-size: 2rem;
+  color: #b75d5d;
+}
+
+/* Header end */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

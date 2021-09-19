@@ -31,7 +31,7 @@
                                 <span>Where you go ?</span>
                             </div>
                             <div class="timepick-item-input">
-                                <input type="text" name="location" placeholder="Select a region">
+                                <input id="region" type="text" name="location" placeholder="Select a region">
                             </div>
                         </div>
                     </li>
@@ -41,7 +41,7 @@
                                 <span>Check in</span>
                             </div>
                             <div class="timepick-item-input">
-                                <input type="date" name="check-in" placeholder="Add a Date">
+                                <input id="check-in" type="date" name="check-in" placeholder="Add a Date">
                             </div>
                         </div>
                     </li>
@@ -51,13 +51,13 @@
                                 <span>Check out</span>
                             </div>
                             <div class="timepick-item-input">
-                                <input type="date" name="check-out" placeholder="Add a Date">
+                                <input id="check-out" type="date" name="check-out" placeholder="Add a Date">
                             </div>
                         </div>
                     </li>
                 </ul>
                 
-                <button class="vacation-search-btn">
+                <button class="vacation-search-btn" onclick="datesVal();">
                     Search
                 </button>
             </div>
@@ -71,6 +71,7 @@
         minDate: "today"
         });
     </script>
+    <script src="js/main.js"></script>
     
 </body>
 </html>

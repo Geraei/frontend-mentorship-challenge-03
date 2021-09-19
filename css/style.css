@@ -34,7 +34,7 @@ nav {
 }
 nav > h1 {
   padding: 1rem 5rem;
-  margin-left: 2rem;
+  margin: 2rem;
   color: var(--lighGreenColor);
   font-size: 2.5rem;
 }
@@ -70,11 +70,15 @@ main {
   justify-content: center;
   align-items: center;
 }
+.container {
+  max-width: 100%;
+}
 
 .vacation-search-group {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   background-color: var(--lightColor);
   border-radius: 15px;
   padding: 1rem;
@@ -84,17 +88,19 @@ main {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
 .search-list-item {
   margin: 0 0 0 3rem;
   border-right: 3px solid var(--darkColor);
+  border-bottom: 3px solid var(--darkColor) hidden;
   padding: 0 3rem 0 0;
 }
 .search-list-item:last-child {
   margin: 0 2rem;
-  border-right: none;
+  border: none;
 }
 
 .timepick-item {
@@ -132,3 +138,79 @@ input {
 }
 
 /* Main end */
+@media only screen and (max-width: 1200px) {
+  span,
+  input {
+    font-size: 2rem;
+  }
+  .container {
+    max-width: 992px;
+  }
+  .vacation-search-group {
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    font-size: 2rem;
+  }
+
+  .vacation-search-list {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .search-list-item {
+    margin: 1rem 3rem;
+    padding: 1rem;
+    border-right: 3px solid var(--darkColor) hidden;
+    border-bottom: 3px solid var(--darkColor);
+  }
+  .search-list-item:last-child {
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .vacation-search-group {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .vacation-search-list {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .search-list-item {
+    margin: 1rem 3rem;
+    padding: 1rem;
+    border-right: 3px solid var(--darkColor) hidden;
+    border-bottom: 3px solid var(--darkColor);
+  }
+  .search-list-item:last-child {
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Media Query */

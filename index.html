@@ -6,26 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pick a destination</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <a class="logo" href=""><h1>Travel With Us</h1></a>
-            <div class="account">
-                <a href="">
-                    <span>Account</span>
+            <h1>Travel With Us</h1>
+                <a href="" class="account">
+                    Account
                     <i class="fas fa-house-user"></i>
                 </a>
-            </div>
         </nav>
     </header>
     
     <main>
-        <div>
-            <ul>
-                <li>
+        <div class="vacation-search-group">
+            <ul class="vacation-search-list">
+                <li class="search-list-item">
                     <div class="timepick-item">
                         <div class="timepick-item-title">
                             <span>Where you go ?</span>
@@ -35,34 +34,42 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="search-list-item">
                     <div class="timepick-item">
                         <div class="timepick-item-title">
                             <span>Check in</span>
                         </div>
                         <div class="timepick-item-input">
-                            <input type="text" name="check-in" placeholder="Add a Date" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            <input type="date" name="check-in" placeholder="Add a Date">
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="search-list-item">
                     <div class="timepick-item">
                         <div class="timepick-item-title">
                             <span>Check out</span>
                         </div>
                         <div class="timepick-item-input">
-                            <input type="text" name="check-out" placeholder="Add a Date" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            <input type="date" name="check-out" placeholder="Add a Date">
                         </div>
                     </div>
                 </li>
             </ul>
             
-            <button class="search-btn">
+            <button class="vacation-search-btn">
                 Search
             </button>
 
         </div>
     </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("input[type=date]", {
+        minDate: "today"
+        });
+    </script>
     
 </body>
 </html>
